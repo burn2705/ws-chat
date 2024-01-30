@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    font-size: 17px;
+}
+
+:root{
+    --radius: 0.5em;
+    --left-msg:#454547;
+    --right-msg:#8888ff;
+    --bg:gray;
+}
+
+.chat-wrapper{
+    margin: auto;
+    width: 600px;
+    height: 100vh;
+    background-color:var(--bg);
+    padding: 0.5em 1.5em;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.8em;
+}
+
+.message{
+
+    width: 80%;
+    background: rgb(122, 122, 200);
+    color: white;
+    padding: 0.5em;
+    border-radius: var(--radius);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.message small{
+    align-self: flex-end;
+}
+
+.message.msg-r {
+    align-self: flex-end;
+    background-color: var(--right-msg);
+}
+
+.message.msg-l {
+    align-self: flex-start;
+    background-color: var(--left-msg);
+
+}
+
+
+
+/* 
+form
+*/
+
+form{
+    --padding-inner: 0.7em;
+    padding: 0.5em;
+
+    justify-self: flex-end;
+}
+
+form input{
+    padding: var(--padding-inner);
+    width: 80%;
+    border-radius: var(--radius);
+}
+
+form button#submit {
+    padding: var(--padding-inner);
+    float: right;
+    background-color: var(--right-msg);
+    color: white;
+}
+
+
+input {
+    border: 0;
+}
+
+button {
+    border-radius: var(--radius);
+    border: 0;
+}
