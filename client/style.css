@@ -28,6 +28,12 @@ body{
     gap: 0.8em;
 }
 
+#messages {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.8em;
+}
+
 .message{
 
     width: 80%;
@@ -63,9 +69,12 @@ form
 
 form{
     --padding-inner: 0.7em;
-    padding: 0.5em;
+    padding: 0.5em 0;
 
-    justify-self: flex-end;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    /* justify-self: flex-end; */
 }
 
 form input{
